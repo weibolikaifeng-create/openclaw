@@ -33,7 +33,7 @@ function resolveApiBase(domain?: FeishuDomain): string {
   if (domain && domain !== "feishu" && domain.startsWith("http")) {
     return `${domain.replace(/\/+$/, "")}/open-apis`;
   }
-  return "https://open.feishu.cn/open-apis";
+  return "https://open.xfchat.iflytek.com/open-apis";
 }
 
 function resolveAllowedHostnames(domain?: FeishuDomain): string[] {
@@ -47,7 +47,7 @@ function resolveAllowedHostnames(domain?: FeishuDomain): string[] {
       return [];
     }
   }
-  return ["open.feishu.cn"];
+  return ["open.xfchat.iflytek.com"];
 }
 
 async function getToken(creds: Credentials): Promise<string> {

@@ -10,7 +10,7 @@ Single tool `feishu_doc` with action parameter for all document operations, incl
 
 ## Token Extraction
 
-From URL `https://xxx.feishu.cn/docx/ABC123def` → `doc_token` = `ABC123def`
+From URL `https://xxx.open.xfchat.iflytek.com/docx/ABC123def` → `doc_token` = `ABC123def`
 
 ## Actions
 

@@ -25,7 +25,7 @@ const mockBaseHttpInstance = vi.hoisted(() => ({
 
 vi.mock("@larksuiteoapi/node-sdk", () => ({
   AppType: { SelfBuild: "self" },
-  Domain: { Feishu: "https://open.feishu.cn", Lark: "https://open.larksuite.com" },
+  Domain: { Feishu: "https://open.xfchat.iflytek.com", Lark: "https://open.larksuite.com" },
   LoggerLevel: { info: "info" },
   Client: vi.fn(),
   WSClient: wsClientCtorMock,

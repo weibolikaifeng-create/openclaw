@@ -12,7 +12,7 @@ export type FeishuReaction = {
 /**
  * Add a reaction (emoji) to a message.
  * @param emojiType - Feishu emoji type, e.g., "SMILE", "THUMBSUP", "HEART"
- * @see https://open.feishu.cn/document/server-docs/im-v1/message-reaction/emojis-introduce
+ * @see https://open.xfchat.iflytek.com/document/server-docs/im-v1/message-reaction/emojis-introduce
  */
 export async function addReactionFeishu(params: {
   cfg: ClawdbotConfig;
@@ -131,7 +131,7 @@ export async function listReactionsFeishu(params: {
 
 /**
  * Common Feishu emoji types for convenience.
- * @see https://open.feishu.cn/document/server-docs/im-v1/message-reaction/emojis-introduce
+ * @see https://open.xfchat.iflytek.com/document/server-docs/im-v1/message-reaction/emojis-introduce
  */
 export const FeishuEmoji = {
   // Common reactions

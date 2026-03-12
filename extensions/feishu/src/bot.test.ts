@@ -91,12 +91,12 @@ describe("buildFeishuAgentBody", () => {
       permissionErrorForAgent: {
         code: 99991672,
         message: "permission denied",
-        grantUrl: "https://open.feishu.cn/app/cli_test",
+        grantUrl: "https://open.xfchat.iflytek.com/app/cli_test",
       },
     });
 
     expect(body).toBe(
-      '[message_id: msg-42]\nSender Name: [Replying to: "previous message"]\n\nhello world\n\n[System: Your reply will automatically @mention: Target User. Do not write @xxx yourself.]\n\n[System: The bot encountered a Feishu API permission error. Please inform the user about this issue and provide the permission grant URL for the admin to authorize. Permission grant URL: https://open.feishu.cn/app/cli_test]',
+      '[message_id: msg-42]\nSender Name: [Replying to: "previous message"]\n\nhello world\n\n[System: Your reply will automatically @mention: Target User. Do not write @xxx yourself.]\n\n[System: The bot encountered a Feishu API permission error. Please inform the user about this issue and provide the permission grant URL for the admin to authorize. Permission grant URL: https://open.xfchat.iflytek.com/app/cli_test]',
     );
   });
 });
@@ -1079,7 +1079,7 @@ describe("handleFeishuMessage command authorization", () => {
             response: {
               data: {
                 code: 99991672,
-                msg: "permission denied https://open.feishu.cn/app/cli_test",
+                msg: "permission denied https://open.xfchat.iflytek.com/app/cli_test",
               },
             },
           }),
@@ -1122,7 +1122,7 @@ describe("handleFeishuMessage command authorization", () => {
     expect(mockFinalizeInboundContext).toHaveBeenCalledWith(
       expect.objectContaining({
         BodyForAgent: expect.stringContaining(
-          "Permission grant URL: https://open.feishu.cn/app/cli_test",
+          "Permission grant URL: https://open.xfchat.iflytek.com/app/cli_test",
         ),
       }),
     );
@@ -1142,7 +1142,7 @@ describe("handleFeishuMessage command authorization", () => {
             response: {
               data: {
                 code: 99991672,
-                msg: "permission denied: contact:contact.base:readonly https://open.feishu.cn/app/cli_scope_bug",
+                msg: "permission denied: contact:contact.base:readonly https://open.xfchat.iflytek.com/app/cli_scope_bug",
               },
             },
           }),

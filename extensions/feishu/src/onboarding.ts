@@ -85,7 +85,7 @@ async function promptFeishuAllowFrom(params: {
 async function noteFeishuCredentialHelp(prompter: WizardPrompter): Promise<void> {
   await prompter.note(
     [
-      "1) Go to Feishu Open Platform (open.feishu.cn)",
+      "1) Go to Feishu Open Platform (https://open.xfchat.iflytek.com)",
       "2) Create a self-built app",
       "3) Get App ID and App Secret from Credentials page",
       "4) Enable required permissions: im:message, im:chat, contact:user.base:readonly",
@@ -395,7 +395,7 @@ export const feishuOnboardingAdapter: ChannelOnboardingAdapter = {
     const domain = await prompter.select({
       message: "Which Feishu domain?",
       options: [
-        { value: "feishu", label: "Feishu (feishu.cn) - China" },
+        { value: "feishu", label: "Feishu (https://open.xfchat.iflytek.com) - China" },
         { value: "lark", label: "Lark (larksuite.com) - International" },
       ],
       initialValue: currentDomain,
